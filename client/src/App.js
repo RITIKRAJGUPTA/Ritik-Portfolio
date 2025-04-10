@@ -27,7 +27,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("https://ritik-portfolio-1.onrender.com/send", {
+      const res = await fetch("https://ritik-portfolio.onrender.com/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
