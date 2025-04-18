@@ -114,7 +114,7 @@ function App() {
             {[
               {
                 title: "Job Portal",
-                desc: "Browse and purchase books online.",
+                desc: "Allow employers to post job vacancies with details such as job title, description, location, and required skills.",
                 repolink: "https://github.com/RITIKRAJGUPTA/job_portal_backend",
                 link: "#",
               },
