@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import profileImage from "./assets/profile.jpg";
 import resumePDF from "./assets/Ritik_Resume.pdf";
+import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import icons
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,7 +28,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("https://ritik-portfolio.onrender.com/send", {
+      const res = await fetch("http://localhost:5000/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -75,15 +76,35 @@ function App() {
         <Button href={resumePDF} download="Ritik_Resume.pdf" className="mt-2">
           Download Resume
         </Button>
+        <div className="mt-3">
+          <Button
+            variant={darkMode ? "outline-light" : "outline-dark"}
+            href="https://www.linkedin.com/in/rrgritik2001/" // Replace with your LinkedIn URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="me-2"
+          >
+            <FaLinkedin className="me-1" /> LinkedIn
+          </Button>
+          <Button
+            variant={darkMode ? "outline-light" : "outline-dark"}
+            href="https://github.com/RITIKRAJGUPTA" // Replace with your GitHub URL
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="me-1" /> GitHub
+          </Button>
+        </div>
       </section>
 
+      {/* Rest of your code remains the same */}
       {/* About */}
       <section id="about" className="pt-5">
         <Container>
           <h2>About Me</h2>
           <p>
-            I’m Ritik, a passionate Software Engineer with experience in React,
-            Node.js, and full-stack development. I’ve worked on projects like a
+            I'm Ritik, a passionate Software Engineer with experience in React,
+            Node.js, and full-stack development. I've worked on projects like a
             gym website, and a job portal.
           </p>
         </Container>
@@ -97,7 +118,7 @@ function App() {
             {[
               {
                 title: "Job Portal",
-                desc: "Allow employers to post job vacancies with details such as job title, description, location, and required skills.",
+                desc: "Browse and purchase books online.",
                 repolink: "https://github.com/RITIKRAJGUPTA/job_portal_backend",
                 link: "#",
               },
