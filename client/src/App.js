@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import NavigationBar from "./components/Navbar";
-import { Link } from "react-router-dom";
 import { Container, Button, Card, Badge, Form } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import profileImage from "./assets/profile.jpg";
 import resumePDF from "./assets/Ritik_Resume.pdf";
-import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import icons
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -76,25 +75,22 @@ function App() {
         <Button href={resumePDF} download="Ritik_Resume.pdf" className="mt-2">
           Download Resume
         </Button>
-        <div className="mt-3">
-          <Button
-            variant={darkMode ? "outline-light" : "outline-dark"}
-            href="https://www.linkedin.com/in/rrgritik2001/" // Replace with your LinkedIn URL
-            target="_blank"
-            rel="noopener noreferrer"
-            className="me-2"
-          >
-            <FaLinkedin className="me-1" /> LinkedIn
-          </Button>
-          <Button
-            variant={darkMode ? "outline-light" : "outline-dark"}
-            href="https://github.com/RITIKRAJGUPTA" // Replace with your GitHub URL
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="me-1" /> GitHub
-          </Button>
-        </div>
+        <div className="mt-3 d-flex justify-content-center gap-3">
+  <Button
+    variant="outline-primary"
+    href="https://www.linkedin.com/in/your-linkedin-id"
+    target="_blank"
+  >
+    LinkedIn
+  </Button>
+  <Button
+  variant={darkMode ? "light" : "outline-dark"}
+  href="https://github.com/RITIKRAJGUPTA"
+  target="_blank"
+>
+  GitHub
+</Button>
+</div>
       </section>
 
       {/* Rest of your code remains the same */}
