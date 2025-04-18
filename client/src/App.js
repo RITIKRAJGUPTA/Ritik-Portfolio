@@ -27,7 +27,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/send", {
+      const res = await fetch("https://ritik-portfolio.onrender.com/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -78,7 +78,7 @@ function App() {
         <div className="mt-3 d-flex justify-content-center gap-3">
   <Button
     variant="outline-primary"
-    href="https://www.linkedin.com/in/your-linkedin-id"
+    href="https://www.linkedin.com/in/rrgritik2001/"
     target="_blank"
   >
     LinkedIn
