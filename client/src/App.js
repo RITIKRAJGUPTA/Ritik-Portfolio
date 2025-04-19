@@ -123,7 +123,7 @@ function App() {
                 desc: "Fitness plans and trainer profiles.",
                 repolink:
                   "https://github.com/RITIKRAJGUPTA/GYM_WEBSTITE_WITH_EMAIL_FUNCTIONALITY",
-                link: "https://subtle-fenglisu-e12d0e.netlify.app/",
+                link: "https://gymsiteyritiik.netlify.app/",
               },
               {
                 title: "JS-Projects",
