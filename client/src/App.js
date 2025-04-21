@@ -114,8 +114,7 @@ function App() {
             {[
               {
                 title: "Job Portal",
-                desc: "Allow employers to post job vacancies with details such as job title, 
-description, location, and  skills.",
+                desc: "Allow employers to post job vacancies with details such as job title",
                 repolink: "https://github.com/RITIKRAJGUPTA/job_portal_backend",
                 link: "#",
               },
@@ -124,7 +123,7 @@ description, location, and  skills.",
                 desc: "Fitness plans and trainer profiles.",
                 repolink:
                   "https://github.com/RITIKRAJGUPTA/GYM_WEBSTITE_WITH_EMAIL_FUNCTIONALITY",
-                link: "https://gymsitebyritik.netlify.app",
+                link: "https://gymsitebyritik.netlify.app/",
               },
               {
                 title: "JS-Projects",
