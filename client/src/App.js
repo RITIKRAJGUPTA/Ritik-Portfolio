@@ -114,7 +114,7 @@ function App() {
             {[
               {
                 title: "Job Portal",
-                desc: "Allow employers to post job vacancies with details such as job title, description, location, and required skills.",
+                desc: "Browse and purchase books online.",
                 repolink: "https://github.com/RITIKRAJGUPTA/job_portal_backend",
                 link: "#",
               },
@@ -123,7 +123,7 @@ function App() {
                 desc: "Fitness plans and trainer profiles.",
                 repolink:
                   "https://github.com/RITIKRAJGUPTA/GYM_WEBSTITE_WITH_EMAIL_FUNCTIONALITY",
-                link: "https://gymsiteyritiik.netlify.app/",
+                link: "https://subtle-fenglisu-e12d0e.netlify.app/",
               },
               {
                 title: "JS-Projects",
@@ -251,6 +251,22 @@ function App() {
           </Form>
         </Container>
       </section>
+
+      {/* Footer / Instagram */}
+<footer className="text-center py-4 border-top">
+  <p>
+    © {new Date().getFullYear()} Ritik Raj Gupta |{" "}
+    <a
+      href="https://www.instagram.com/rrgritik_/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none", color: darkMode ? "#fff" : "#000" }}
+    >
+      Instagram
+    </a>
+  </p>
+</footer>
+
     </div>
   );
 }
