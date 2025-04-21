@@ -114,7 +114,8 @@ function App() {
             {[
               {
                 title: "Job Portal",
-                desc: "Browse and purchase books online.",
+                desc: "Allow employers to post job vacancies with details such as job title, 
+description, location, and  skills.",
                 repolink: "https://github.com/RITIKRAJGUPTA/job_portal_backend",
                 link: "#",
               },
@@ -123,7 +124,7 @@ function App() {
                 desc: "Fitness plans and trainer profiles.",
                 repolink:
                   "https://github.com/RITIKRAJGUPTA/GYM_WEBSTITE_WITH_EMAIL_FUNCTIONALITY",
-                link: "https://subtle-fenglisu-e12d0e.netlify.app/",
+                link: "https://gymsitebyritik.netlify.app",
               },
               {
                 title: "JS-Projects",
