@@ -4,7 +4,7 @@ import { Container, Button, Card, Badge, Form } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import profileImage from "./assets/profile.jpg";
-import resumePDF from "./assets/Ritik_Resume.pdf";
+import resumePDF from "./assets/rrgRitikResume.pdf";
 
 
 function App() {
@@ -72,7 +72,7 @@ function App() {
         />
         <h1>Welcome to My Portfolio</h1>
         <p>I am a Full Stack Developer</p>
-        <Button href={resumePDF} download="RITIK 1_Resume.pdf" className="mt-2">
+        <Button href={resumePDF} download="rrgRitikResume.pdf" className="mt-2">
           Download Resume
         </Button>
         <div className="mt-3 d-flex justify-content-center gap-3">
