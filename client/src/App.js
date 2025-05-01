@@ -72,7 +72,7 @@ function App() {
         />
         <h1>Welcome to My Portfolio</h1>
         <p>I am a Full Stack Developer</p>
-        <Button href={resumePDF} download="Ritik_Resume.pdf" className="mt-2">
+        <Button href={resumePDF} download="RITIK_Resume.pdf" className="mt-2">
           Download Resume
         </Button>
         <div className="mt-3 d-flex justify-content-center gap-3">
