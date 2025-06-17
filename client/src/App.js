@@ -4,7 +4,7 @@ import { Container, Button, Card, Badge, Form } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import profileImage from "./assets/profile.jpg";
-import resumePDF from "./assets/rrgRitikResume.pdf";
+import resumePDF from "./assets/ritikResume.pdf";
 
 
 function App() {
