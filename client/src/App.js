@@ -119,6 +119,12 @@ function App() {
                 link: "#",
               },
               {
+                title: "NameVerse",
+                desc: "all-in-one interactive web platform that blends creativity, entertainment, and utility in a single experience.",
+                repolink: "https://github.com/RITIKRAJGUPTA/Ritik-s-Insight-Hub---NameVerse",
+                link: "https://nameversebyrrgritik.onrender.com/",
+              },
+              {
                 title: "Gym Website",
                 desc: "Fitness plans and trainer profiles.",
                 repolink:
