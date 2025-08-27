@@ -3,8 +3,8 @@ import NavigationBar from "./components/Navbar";
 import { Container, Button, Card, Badge, Form } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import profileImage from "./assets/profile.jpg";
-import resumePDF from "./assets/ritikResume.pdf";
+import profileImage from "./assets/profile1.jpg";
+import resumePDF from "./assets/ResumeRitik1.pdf";
 
 
 function App() {
