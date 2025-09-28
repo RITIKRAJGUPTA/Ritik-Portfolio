@@ -10,7 +10,13 @@ const app = express();
 const PORT = process.env.PORT || 5000; // ✅ use Render's port if available
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL, // ✅ allow only your frontend URL
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 app.use(json());
 app.use(urlencoded({ extended: true }));
 
@@ -51,11 +57,13 @@ Message: ${message}
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error.message, error);
-    res.status(500).json({ error: "Email sending failed", details: error.message });
+    res
+      .status(500)
+      .json({ error: "Email sending failed", details: error.message });
   }
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
