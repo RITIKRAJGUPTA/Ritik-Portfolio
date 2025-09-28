@@ -5,6 +5,11 @@ dotenv.config();
 import express, { json, urlencoded } from "express";
 import { createTransport } from "nodemailer";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000; // ✅ use Render's port if available
@@ -13,7 +18,7 @@ const PORT = process.env.PORT || 5000; // ✅ use Render's port if available
 app.use(
   cors({
     origin: process.env.FRONTEND_URL, // ✅ allow only your frontend URL
-    methods: ["POST"],
+    methods: ["GET", "POST"],
     credentials: true,
   })
 );
@@ -30,7 +35,7 @@ app.post("/send", async (req, res) => {
 
   try {
     const transporter = createTransport({
-      host: "smtp.gmail.com", // ✅ safer than service: 'gmail'
+      host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
@@ -40,8 +45,8 @@ app.post("/send", async (req, res) => {
     });
 
     const mailOptions = {
-      from: process.env.USER_EMAIL, // ✅ must be your own email
-      replyTo: email, // ✅ so you can reply directly to the visitor
+      from: process.env.USER_EMAIL,
+      replyTo: email,
       to: process.env.USER_EMAIL,
       subject: `Message from ${name}`,
       text: `
@@ -57,10 +62,15 @@ Message: ${message}
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error.message, error);
-    res
-      .status(500)
-      .json({ error: "Email sending failed", details: error.message });
+    res.status(500).json({ error: "Email sending failed", details: error.message });
   }
+});
+
+// ✅ Serve React frontend
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 // Start server
