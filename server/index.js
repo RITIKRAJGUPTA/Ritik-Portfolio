@@ -12,16 +12,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 5000; // ✅ use Render's port if available
+const PORT = process.env.PORT || 5000;
 
-// Middleware
+// ✅ Safe CORS using your frontend URL
+const frontendUrl = process.env.FRONTEND_URL || "https://ritik-portfolio-1.onrender.com";
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL, // ✅ allow only your frontend URL
+    origin: frontendUrl,
     methods: ["GET", "POST"],
     credentials: true,
   })
 );
+
 app.use(json());
 app.use(urlencoded({ extended: true }));
 
@@ -61,7 +63,7 @@ Message: ${message}
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
-    console.error("Error sending email:", error.message, error);
+    console.error("Error sending email:", error.message);
     res.status(500).json({ error: "Email sending failed", details: error.message });
   }
 });
