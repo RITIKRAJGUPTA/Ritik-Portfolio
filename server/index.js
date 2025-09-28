@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000; // ✅ use Render's port if available
 app.use(
   cors({
     origin: process.env.FRONTEND_URL, // ✅ allow only your frontend URL
-    methods: ["GET", "POST"],
+    methods: ["POST"],
     credentials: true,
   })
 );
