@@ -14,6 +14,19 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// ✅ ADD ROOT ROUTE
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Portfolio Backend Server is Running!',
+    endpoints: {
+      contact: 'POST /send'
+    },
+    status: 'active',
+    timestamp: new Date().toISOString()
+  });
+});
+
+
 // POST /send route
 app.post('/send', async (req, res) => {
   const { name, email, message } = req.body;
